@@ -1,10 +1,11 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         boolean cont;
 
-        //PART 3 
+        //PART 3
         //This code was written by Nick Taylor, Michael Woelfel, and Miguel Gonzales
 
         do {
@@ -20,6 +21,7 @@ public class Main {
             {
                 fizzBuzz(n);
                 Object anArray[] = Main.fizzBuzz(n);
+                Arrays.asList(anArray);
                 for (int i = 0; i < anArray.length; i++)
                 {
                     System.out.println(anArray[i]);
@@ -62,6 +64,7 @@ public class Main {
                 array[i-1] = i;
             }
         }
+        Arrays.asList(array);
         return array;
     }
 }
