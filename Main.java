@@ -10,6 +10,7 @@ public class Main {
 
         //PART 2
         //This code was written by Nick Taylor, Michael Woelfel, and Miguel Gonzales
+        //This was added as of 9/11/2017 9:07 PM as a test update
 
         System.out.println("fizzBuzz a number:");
         input = kb.nextInt();
