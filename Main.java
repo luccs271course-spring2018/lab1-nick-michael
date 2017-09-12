@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         boolean cont;
 
-        //PART 3
+        //PART 3 
         //This code was written by Nick Taylor, Michael Woelfel, and Miguel Gonzales
 
         do {
