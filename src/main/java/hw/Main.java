@@ -1,48 +1,68 @@
-package hw;
 import java.util.Scanner;
 
 public class Main {
-  public static void main(final String[] args) {
-    System.out.println("SUCCESS");
+    public static void main(String[] args) {
+        boolean cont;
 
-    //variables:
-    int input = 30;
-    int n = 1;
-    //Scanner kb = new Scanner(System.in);
+        //PART 3 
+        //This code was written by Nick Taylor, Michael Woelfel, and Miguel Gonzales
 
-    //PART 2
-    //This code was written by Nick Taylor, Michael Woelfel, and Miguel Gonzales
-    //This was added as of 9/11/2017 9:07 PM as a test update
-    //9/18/2017 8:300 attempting a resubmission
+        do {
+            System.out.println("fizzBuzz a number");
 
-    System.out.println("FizzBuzz a number:");
-    // WORKS UP TO HERE
-
-    input = Integer.parseInt(args[0]);
-    //input = kb.nextInt();
-    while (input > 0)
-    {
-      if (n % 3 == 0)
-      {
-        if (n % 5 == 0)
-        {
-          System.out.println("Fizz buzz");
-        }
-        else
-        {
-          System.out.println("Fizz");
-        }
-      }
-      else if (n % 5 == 0)
-      {
-        System.out.println("Buzz");
-      }
-      else
-      {
-        System.out.println(Integer.toString(n));
-      }
-      n++;
-      input--;
+            //Scanner kb = new Scanner(System.in);
+            //int n = kb.nextInt();
+			n = Integer.parseInt(args[0]);
+            if (n <= 0)
+            {
+                System.out.println("Cannot test negative values or values equal to 0");
+            }
+            else
+            {
+                fizzBuzz(n);
+                Object anArray[] = Main.fizzBuzz(n);
+                for (int i = 0; i < anArray.length; i++)
+                {
+                    System.out.println(anArray[i]);
+                }
+            }
+            System.out.println("Continue? Y/N");
+            char test = kb.next().charAt(0);
+            if (test == 'y' || test == 'Y')
+            {
+                cont = true;
+            }
+            else
+            {
+                cont = false;
+            }
+        } while (cont);
     }
-  }
+
+
+    public static Object[] fizzBuzz(int fB)
+    {
+        Object[] array = new Object[fB];
+        for(int i = 1; i <= array.length; i++)
+        {
+            if( i % 3 == 0)
+            {
+                if( i % 5 == 0) {
+                    array[i-1] = "fizz buzz";
+                }
+                else {
+                    array[i-1] = "fizz";
+                }
+            }
+            else if(i % 5 == 0)
+            {
+                array[i-1] = "buzz";
+            }
+            else
+            {
+                array[i-1] = i;
+            }
+        }
+        return array;
+    }
 }
